@@ -3,6 +3,8 @@ import './App.css';
 
 const number = 34;
 const text = 'Keep on going';
+const item = true;
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,24 @@ function App() {
           color: 'orange'
         }}>
           {text}
+        </p>
+        <p>
+          {1987}
+        </p>
+        <p>
+          {23 + 44}
+        </p>
+        <p>
+          {item && 'Item equals true'}
+        </p>
+        <p>
+          {!item ? 'Item still true' : 'Item is false already'}
+        </p>
+        <p>
+          {null}
+          {undefined}
+          {true}
+          {false}
         </p>
         <a
           className="App-link"
