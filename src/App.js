@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { count, length } from './numbers'
 
 const number = 34;
 const text = 'Keep on going';
@@ -19,30 +20,7 @@ function App() {
           Hello World!
         </p>
         <p>
-          {number}
-        </p>
-        <p style = {{
-          color: 'orange'
-        }}>
-          {text}
-        </p>
-        <p>
-          {1987}
-        </p>
-        <p>
-          {23 + 44}
-        </p>
-        <p>
-          {item && 'Item equals true'}
-        </p>
-        <p>
-          {!item ? 'Item still true' : 'Item is false already'}
-        </p>
-        <p>
-          {null}
-          {undefined}
-          {true}
-          {false}
+          { count * length }
         </p>
         <a
           className="App-link"
