@@ -3,13 +3,25 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 
-const todoItem = 'Написать новое приложение';
-const App = () => (
+const App = () => {
+  const items = [
+    {
+      value: 'Написать новое приложение.'
+    },
+    {
+      value: 'Talk to my friend.'
+    },
+    {
+      value: 'Make one more step closer to my goal.'
+    }
+  ];
+
+return (
   <div>
     <h1>Important cases: </h1>
     {/*<InputItem />*/} 
-    <ItemList todoItem = {todoItem}/>
+    <ItemList items = {items}/>
     <Footer count = {3} />
   </div>);
-
+}
 export default App;

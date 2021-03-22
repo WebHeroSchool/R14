@@ -1,4 +1,4 @@
 import React from 'react';
 
-const Item = ({ todoItem }) => (<span>{todoItem}</span>);
+const Item = ({ value }) => (<span>{value}</span>);
 export default Item;
