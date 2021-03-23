@@ -1,0 +1,13 @@
+.base {
+  margin: auto;
+  width: 300px;
+}
+
+.title {
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+
+
