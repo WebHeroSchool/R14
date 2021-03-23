@@ -1,5 +1,5 @@
 import React from 'react';
-//import InputItem from '../InputItem/InputItem';
+import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
@@ -23,7 +23,7 @@ const App = () => {
 return (
   <div className = {styles.base}>
     <h1 className = {styles.title}>Important cases: </h1>
-    {/*<InputItem />*/} 
+    <InputItem /> 
     <ItemList items = {items}/>
     <Footer count = {3} />
   </div>);
