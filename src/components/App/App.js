@@ -7,7 +7,7 @@ import styles from './App.module.css';
 const App = () => {
   const items = [
     {
-      value: 'Написать новое приложение.',
+      value: 'Create a new application.',
       isDone: false
     },
     {
@@ -25,7 +25,7 @@ return (
     <h1 className = {styles.title}>Important cases: </h1>
     <InputItem /> 
     <ItemList items = {items}/>
-    <Footer count = {3} />
+    <Footer count = {1} />
   </div>);
 }
 export default App;
