@@ -23,14 +23,16 @@ class App extends React.Component {
     ]
   };
 
-    render() {
-  return (
-    <div className = {styles.base}>
-      <h1 className = {styles.title}>Important cases: </h1>
-      <InputItem /> 
-      <ItemList items = {this.state.items}/>
-      <Footer count = {1} />
-    </div>);
+  onClickDone = isDone => console.log(isDone);
+
+  render() {
+    return (
+      <div className = {styles.base}>
+        <h1 className = {styles.title}>Important cases: </h1>
+        <InputItem /> 
+        <ItemList items = {this.state.items} onClickDone={this.onClickDone} />
+        <Footer count = {1} />
+      </div>);
   }
 }
 
