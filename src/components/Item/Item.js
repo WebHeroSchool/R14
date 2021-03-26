@@ -7,6 +7,7 @@ const Item = ({ value, isDone, onClickDone, id }) => (
 <span>
 <Checkbox
         //defaultChecked
+        checked={isDone}
         onClick = {() => onClickDone(id)}
         color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
