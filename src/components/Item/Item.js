@@ -3,11 +3,11 @@ import styles from './Item.module.css';
 import classnames from 'classnames';
 import Checkbox from '@material-ui/core/Checkbox';
 
-const Item = ({ value, isDone, onClickDone }) => (
+const Item = ({ value, isDone, onClickDone, id }) => (
 <span>
 <Checkbox
         //defaultChecked
-        onClick = {() => onClickDone(isDone)}
+        onClick = {() => onClickDone(id)}
         color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
