@@ -1,21 +1,19 @@
 import React from 'react';
 import Item from '../Item/Item';
 import styles from './ItemList.module.css';
-import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
+// import IconButton from '@material-ui/core/IconButton';
+// import DeleteIcon from '@material-ui/icons/Delete';
 
-const ItemList = ({ items, onClickDone }) => (<ul className={styles.list}>
+const ItemList = ({ items, onClickDone, onClickDelete }) => (<ul className={styles.list}>
     {items.map(item => <li key={item.value}>
       <Item 
         value = {item.value} 
         isDone = {item.isDone}
         id = {item.id}
         onClickDone = {onClickDone}
+        onClickDelete = {onClickDelete}
       />
-      <IconButton aria-label="delete" className={styles.delete}>
-        <DeleteIcon 
-        />
-      </IconButton></li>)}
+      </li>)}
 </ul>);
 
 export default ItemList;
