@@ -18,5 +18,9 @@ const Footer = ({ count }) => (
     </div>
   </div>
 );
-  
+
+Footer.defaultProps = {
+  count: 0
+};
+
 export default Footer;

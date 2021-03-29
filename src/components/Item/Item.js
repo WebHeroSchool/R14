@@ -27,9 +27,9 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
 </IconButton>
 </span>);
 
-// Item.defaultProps = {
-//   value: "Нет задачи"
-// };
+Item.defaultProps = {
+  value: "No tasks"
+};
 
 // Item.propTypes = {
 //   value: PropTypes.oneOfType([

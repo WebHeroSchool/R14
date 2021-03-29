@@ -23,7 +23,7 @@ class InputItem extends React.Component {
       <div>
         <TextField 
           id="filled-full-width"
-          label="Enter a new case"
+          label="Enter a new task"
           style={{ margin: 8 }}
           fullWidth
           value = {this.state.inputValue}
@@ -41,7 +41,7 @@ class InputItem extends React.Component {
           onClick = {this.onButtonClick}
           disabled={!this.state.inputValue}
           >
-          Добавить
+          Add a task
         </Button>
       </div>
     )

@@ -16,4 +16,11 @@ const ItemList = ({ items, onClickDone, onClickDelete }) => (<ul className={styl
       </li>)}
 </ul>);
 
+ItemList.defaultProps = {
+  items: [{
+      value: 'No tasks are entered',
+      isDone: false
+  }]
+}
+
 export default ItemList;

@@ -56,7 +56,7 @@ class App extends React.Component {
   render() {
     return (
       <div className = {styles.base}>
-        <h1 className = {styles.title}>Important cases: </h1>
+        <h1 className = {styles.title}>Important tasks: </h1>
         <InputItem onClickAdd = {this.onClickAdd} /> 
         <ItemList items = {this.state.items} 
         onClickDone={this.onClickDone} 
