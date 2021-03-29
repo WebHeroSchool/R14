@@ -8,7 +8,6 @@ import DeleteIcon from '@material-ui/icons/Delete';
 const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
 <span>
 <Checkbox
-        //defaultChecked
         checked={isDone}
         onClick = {() => onClickDone(id)}
         color="primary"
@@ -27,6 +26,16 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
     <DeleteIcon  />
 </IconButton>
 </span>);
+
+// Item.defaultProps = {
+//   value: "Нет задачи"
+// };
+
+// Item.propTypes = {
+//   value: PropTypes.oneOfType([
+//   PropTypes.string,
+//   PropTypes.number
+// ])};
 
 export default Item;
 
