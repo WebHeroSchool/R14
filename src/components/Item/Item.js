@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
+import PropTypes from 'prop-types';
 
 const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
 <span>
@@ -31,11 +32,11 @@ Item.defaultProps = {
   value: "No tasks"
 };
 
-// Item.propTypes = {
-//   value: PropTypes.oneOfType([
-//   PropTypes.string,
-//   PropTypes.number
-// ])};
+Item.propTypes = {
+  value: PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number
+])};
 
 export default Item;
 
