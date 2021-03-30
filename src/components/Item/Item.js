@@ -5,9 +5,25 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import PropTypes from 'prop-types';
+import { ReceiptTwoTone } from '@material-ui/icons';
 
-const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
-<span>
+class Item extends React.Component {
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+  }
+
+  render() {
+    const { value, isDone, onClickDone, id, onClickDelete } = this.props;
+    return(
+      <span>
 <Checkbox
         checked={isDone}
         onClick = {() => onClickDone(id)}
@@ -27,6 +43,11 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
     <DeleteIcon  />
 </IconButton>
 </span>);
+  }
+}
+
+
+//const Item = () => (
 
 Item.defaultProps = {
   value: "No tasks"
