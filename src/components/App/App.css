@@ -1,0 +1,17 @@
+.base {
+  margin: auto;
+  width: 300px;
+}
+
+.base__title {
+  font-family: Arial;
+}
+
+.base__list {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.base__footer {
+  color: blue;
+  font-family: Arial;
+}
