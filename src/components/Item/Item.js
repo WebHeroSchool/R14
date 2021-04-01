@@ -12,9 +12,9 @@ class Item extends React.Component {
     this.timerID = setInterval(() => console.log('memory leak'), 1000);
   }
 
-  // componentDidUpdate() {
-  //   console.log('componentDidUpdate');
-  // }
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
 
   componentWillUnmount() {
     clearInterval(this.timerID);
