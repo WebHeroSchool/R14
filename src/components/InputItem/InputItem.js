@@ -44,7 +44,7 @@ class InputItem extends React.Component {
           Add a task
         </Button>
       </div>
-    )
+    );
   }
 }
 
