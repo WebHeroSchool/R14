@@ -2,7 +2,7 @@ import React from 'react';
 import CardContent from '@material-ui/core/CardContent';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Octokit } from '@octokit/rest';
-import { Subtitles } from '@material-ui/icons';
+//import { Subtitles } from '@material-ui/icons';
 import styles from './About.module.css';
 
 
