@@ -28,11 +28,12 @@ const Todo = () => {
     count: 3
   };
 
-  const [items, setItems] = useState (initialState.items);
-  const [count, setCount] = useState (initialState.count);
+  const [items, setItems] = useState(initialState.items);
+  const [visibleItems, setvisibleItems] = useState();
+  const [filter, setfilter] = useState('All');
+  const [count, setCount] = useState(initialState.count);
 
-  useEffect(() => {console.log('mount');}, []);
-  useEffect(() => {console.log('update');});
+  useEffect(() => {setvisibleItems(itemsFilter(items, filter))}, [filter, items]);
 
   const onClickDone = id => {
     const newItemList = items.map(item => {
@@ -63,17 +64,39 @@ const Todo = () => {
           id: count + 1
     }]);
       setCount(count + 1)
+  }
+
+  function itemsFilter(itemList, value) {
+    switch (value) {
+      case 'Active': return itemList.filter(item => !item.isDone);
+      case 'Completed': return itemList.filter(item => item.isDone);
+      case 'All':
+      default: return itemList;
     }
+  }
+
+  function clickFilterBtn(value) {
+    setfilter(value)
+  }
+
+
     
   return (
     <CardContent>
       <h1 className = {styles.title}>Important tasks: </h1>
-      <InputItem onClickAdd = {onClickAdd} /> 
+      <InputItem 
+        onClickAdd = {onClickAdd} 
+        items = {items} 
+      /> 
       <ItemList 
-      items = {items} 
-      onClickDone={onClickDone} 
-      onClickDelete={onClickDelete}/>
-      <Footer count = {count} />
+        items = {visibleItems} 
+        onClickDone={onClickDone} 
+        onClickDelete={onClickDelete}
+      />
+      <Footer 
+        count = {count}
+        clickFilterBtn = {clickFilterBtn}
+      />
     </CardContent>
   );
 }

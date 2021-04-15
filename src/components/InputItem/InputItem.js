@@ -5,7 +5,9 @@ import styles from './InputItem.module.css';
 
 class InputItem extends React.Component {
   state = {
-    inputValue: ""
+    inputValue: "",
+    inputBackground: "",
+    inputLabel: "Enter a new task"
   };
 
   onButtonClick = () => {
@@ -13,7 +15,12 @@ class InputItem extends React.Component {
       inputValue: ''
     });
 
-    this.props.onClickAdd(this.state.inputValue);
+    if (!this.props.items.some(item => item.value.toLowerCase() === this.state.inputValue.toLowerCase())) {
+      this.props.onClickAdd(this.state.inputValue)
+    } else {
+      this.setState({inputBackground: 'red', inputLabel: 'Error! The entered value is incorrect'});
+    }
+    
   }
 
   render (){
@@ -23,11 +30,13 @@ class InputItem extends React.Component {
       <div>
         <TextField 
           id="filled-full-width"
-          label="Enter a new task"
-          style={{ margin: 8 }}
+          label={this.state.inputLabel}
+          style={{ margin: 8,
+          backgroundColor: this.state.inputBackground }}
           fullWidth
           value = {this.state.inputValue}
           onChange={event => this.setState({inputValue: event.target.value})}
+          onFocus={() => this.setState({inputBackground: "", inputLabel: "Enter a new task"})}
           margin="normal"
           InputLabelProps={{
             shrink: true,
@@ -41,7 +50,7 @@ class InputItem extends React.Component {
           onClick = {this.onButtonClick}
           disabled={!this.state.inputValue}
           >
-          Add a task
+          Add a new task
         </Button>
       </div>
     );
