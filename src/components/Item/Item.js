@@ -5,7 +5,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import PropTypes from 'prop-types';
-import { ReceiptTwoTone } from '@material-ui/icons';
 
 class Item extends React.Component {
   render() {

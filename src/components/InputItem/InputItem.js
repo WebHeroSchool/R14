@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import styles from './InputItem.module.css';
+import './InputItem.module.css';
 
 class InputItem extends React.Component {
   state = {
@@ -24,7 +24,6 @@ class InputItem extends React.Component {
   }
 
   render (){
-    const { onClickAdd } = this.props;
 
     return (
       <div>

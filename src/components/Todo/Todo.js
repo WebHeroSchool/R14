@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CardContent from '@material-ui/core/CardContent';
 import ItemList from '../ItemList/ItemList';
 import InputItem from '../InputItem/InputItem';
@@ -29,7 +28,7 @@ const Todo = () => {
   };
 
   const [items, setItems] = useState(initialState.items);
-  const [visibleItems, setvisibleItems] = useState();
+  const [visibleItems, setvisibleItems] = useState([]);
   const [filter, setfilter] = useState('All');
   const [count, setCount] = useState(initialState.count);
 
@@ -48,9 +47,7 @@ const Todo = () => {
 
   
   const onClickDelete = id => {
-    const newItemList = items.filter(item =>{
-    return item.id !== id; 
-      });
+    const newItemList = items.filter(item => item.id !== id);
       setItems(newItemList)
       setCount(count - 1)
   };
@@ -79,7 +76,10 @@ const Todo = () => {
     setfilter(value)
   }
 
-
+  const onClickDeleteDone = () => {
+    const newItemList = items.filter(item => !item.isDone);
+    setItems(newItemList)
+  };
     
   return (
     <CardContent>
@@ -94,8 +94,9 @@ const Todo = () => {
         onClickDelete={onClickDelete}
       />
       <Footer 
-        count = {count}
+        count = {visibleItems.length}
         clickFilterBtn = {clickFilterBtn}
+        onClickDeleteDone = {onClickDeleteDone}
       />
     </CardContent>
   );

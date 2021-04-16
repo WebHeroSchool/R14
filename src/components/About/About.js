@@ -13,13 +13,13 @@ class About extends React.Component {
 		isLoading: true,
 		repoList: [],
 		userInfo: {},
-		userStatus: undefined,
-      	repoStatus: undefined
+		userStatus: null,
+      	repoStatus: null
 	}
 
 	componentDidMount() {
 		octokit.repos.listForUser({
-			userName: 'SanSanKon'
+			username: 'SanSanKon'
 		}).then(({ data, status }) => {
 			this.setState({
 				repoList: data,
@@ -57,7 +57,7 @@ class About extends React.Component {
 		    <h1>{ isLoading ? <CircularProgress /> : 'About me' }</h1>
           {!isLoading && userStatus === 200 &&
 		  	<div>
-          <img src={userInfo.avatar_url} alt="User photo" class={styles.img}></img>
+          <img src={userInfo.avatar_url} alt="User-face" className={styles.img}></img>
 					<p className={styles.login}>{userInfo.login}</p>
 					<p className={styles.text}>{userInfo.bio}</p>
 			  </div>}
