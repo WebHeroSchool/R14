@@ -9,17 +9,17 @@ const Todo = () => {
     const initialState = {
     items: [
       {
-        value: 'Create a new application.',
+        value: 'Do something.',
         isDone: false,
         id: 1
       },
       {
-        value: 'Talk to my friend.',
+        value: 'Do something.',
         isDone: true,
         id: 2
       },
       {
-        value: 'Make one more step closer to my goal.',
+        value: 'Do something.',
         isDone: true,
         id: 3
       }

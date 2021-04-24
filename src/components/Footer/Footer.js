@@ -7,13 +7,13 @@ const Footer = ({ count, clickFilterBtn, onClickDeleteDone }) => (
   <div><div className = {styles.footer}>Cases left: {count} </div>
     <div className={styles.button}>
       <Button variant="outlined" className = {styles.all} onClick={() => clickFilterBtn("All")}>All</Button>
-      <Button variant="outlined" color="primary" onClick={() => clickFilterBtn("Active")}>
+      <Button variant="outlined" classNmae = {styles.active} color="primary" onClick={() => clickFilterBtn("Active")}>
         Active
       </Button>{console.log(count)}
-      <Button variant="outlined" color="secondary" onClick={() => clickFilterBtn("Completed")}>
+      <Button variant="outlined" className = {styles.completed} color="secondary" onClick={() => clickFilterBtn("Completed")}>
         Completed
       </Button>
-      <Button variant="outlined" onClick={onClickDeleteDone}>
+      <Button variant="outlined" className = {styles.clear} onClick={onClickDeleteDone}>
         Clear Completed
       </Button>
     </div>

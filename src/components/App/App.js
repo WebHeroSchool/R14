@@ -13,10 +13,10 @@ const App = () => (
   <Router>
     <div className = {styles.base}>
       <Card className = {styles.sidebar}>
-        <MenuList>
-          <Link to='/' className = {styles.link}><MenuItem>About me</MenuItem></Link>
-          <Link to='/todo' className = {styles.link}><MenuItem>Tasks</MenuItem></Link>
-          <Link to='/contacts' className = {styles.link}><MenuItem>Contacts</MenuItem></Link>
+        <MenuList className = {styles.list}>
+          <Link to='/' className = {styles.link}><MenuItem className = {styles.item}>About me</MenuItem></Link>
+          <Link to='/todo' className = {styles.link}><MenuItem className = {styles.item}>Tasks</MenuItem></Link>
+          <Link to='/contacts' className = {styles.link}><MenuItem className = {styles.item}>Contacts</MenuItem></Link>
         </MenuList>
       </Card>
 

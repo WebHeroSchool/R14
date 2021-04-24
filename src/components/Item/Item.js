@@ -17,19 +17,19 @@ class Item extends React.Component {
         color="primary"
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
-  <span className = {
-    classnames({
-        [styles.item]: true,
-        [styles.done]: isDone,
-    }) 
-}>{value}</span>
-<IconButton 
-  aria-label="delete" 
-  onClick = {() => onClickDelete(id)} 
-  className={styles.delete}>
-    <DeleteIcon  />
-</IconButton>
-</span>);
+          <span className = {
+            classnames({
+                [styles.item]: true,
+                [styles.done]: isDone,
+            }) 
+        }>{value}</span>
+        <IconButton 
+          aria-label="delete" 
+          onClick = {() => onClickDelete(id)} 
+          className={styles.delete}>
+            <DeleteIcon  size="small"/>
+        </IconButton>
+      </span>);
   }
 }
 
